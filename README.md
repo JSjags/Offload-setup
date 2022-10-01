@@ -1,6 +1,6 @@
 # HeadiesBox
 
-A Mobile Application To Help Health-Care Workers Manage Stress
+A Mobile Application To Help Health-Care Workers Manage Stress.
 
 ##**⚡Quick Start⚡**
 
