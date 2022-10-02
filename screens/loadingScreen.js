@@ -1,17 +1,18 @@
 import React, { useRef } from "react";
 import { View } from "react-native";
 import { Video } from "expo-av";
+import { useTailwind } from "tailwind-rn";
 import backgroundVideo from "../assets/test-video.mp4";
-import { loadingStyles } from "../styles/loading";
 
 export default function LoadingScreen() {
+  const tailwind = useTailwind();
   const video = useRef(null);
   return (
-    <View style={loadingStyles.container}>
+    <View style={tailwind("flex-1")}>
       <Video
         ref={video}
-        style={loadingStyles.backgroundVideo}
         source={backgroundVideo}
+        style={tailwind("flex-1")}
         useNativeControls={false}
         resizeMode="cover"
         isLooping={false}

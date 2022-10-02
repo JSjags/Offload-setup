@@ -1,11 +1,16 @@
-import React, { useRef } from "react";
+import React from "react";
 import { View, Text } from "react-native";
-import { loginStyles } from "../styles/login";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useTailwind } from "tailwind-rn";
 
 export default function LoginScreen() {
+  const tailwind = useTailwind();
+
   return (
-    <View style={loginStyles.container}>
-      <Text style={loginStyles.screenHeader}>Login</Text>
-    </View>
+    <SafeAreaView>
+      <View style={tailwind("bg-white h-full flex items-center")}>
+        <Text style={tailwind("text-black")}>Login</Text>
+      </View>
+    </SafeAreaView>
   );
 }
