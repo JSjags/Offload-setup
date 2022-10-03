@@ -8,7 +8,7 @@ export default function LoginScreen() {
 
   return (
     <SafeAreaView>
-      <View style={tailwind("bg-white h-full flex items-center")}>
+      <View style={tailwind("bg-white h-full flex items-center text-blue-600")}>
         <Text style={tailwind("text-black")}>Login</Text>
       </View>
     </SafeAreaView>
