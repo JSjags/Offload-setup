@@ -4,6 +4,7 @@ import { TailwindProvider } from "tailwind-rn";
 import utilities from "./tailwind.json";
 import LoginScreen from "./screens/loginScreen";
 import LoadingScreen from "./screens/loadingScreen";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   const [showLoadingScreen, setShowLoadingScreen] = useState(true);
@@ -12,8 +13,10 @@ export default function App() {
     setTimeout(() => setShowLoadingScreen(false), 3000);
   }, []);
   return (
-    <TailwindProvider utilities={utilities}>
-      {showLoadingScreen ? <LoadingScreen /> : <LoginScreen />}
-    </TailwindProvider>
+    <SafeAreaView>
+      <TailwindProvider utilities={utilities}>
+        {showLoadingScreen ? <LoadingScreen /> : <LoginScreen />}
+      </TailwindProvider>
+    </SafeAreaView>
   );
 }
