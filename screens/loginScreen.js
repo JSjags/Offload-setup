@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, ImageBackground, TouchableOpacity } from "react-native";
 import { AntDesign, FontAwesome5 } from "@expo/vector-icons";
-// import { useTailwind } from "tailwind-rn";
 import tw from "tailwind-react-native-classnames";
 
 export default function LoginScreen() {
