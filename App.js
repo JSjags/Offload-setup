@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { View } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import LoginScreen from "./screens/loginScreen";
 import LoadingScreen from "./screens/loadingScreen";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   const [showLoadingScreen, setShowLoadingScreen] = useState(true);
@@ -11,9 +11,8 @@ export default function App() {
     setTimeout(() => setShowLoadingScreen(false), 3000);
   }, []);
   return (
-    <View style={tw`flex-1`}>
-      {/* Display loading Screen before loginScreen */}
+    <SafeAreaView style={tw`flex-1`}>
       {showLoadingScreen ? <LoadingScreen /> : <LoginScreen />}
-    </View>
+    </SafeAreaView>
   );
 }
