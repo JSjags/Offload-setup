@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import LoginScreen from "./screens/loginScreen";
 import LoadingScreen from "./screens/loadingScreen";
@@ -12,6 +12,7 @@ export default function App() {
   }, []);
   return (
     <View style={tw`flex-1`}>
+      {/* Display loading Screen before loginScreen */}
       {showLoadingScreen ? <LoadingScreen /> : <LoginScreen />}
     </View>
   );
