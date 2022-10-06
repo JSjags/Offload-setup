@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { View } from "react-native";
 import { Video } from "expo-av";
 import tw from "tailwind-react-native-classnames";
-import backgroundVideo from "../assets/test-video.mp4";
+import backgroundVideo from "../assets/background-video.mp4";
 
 export default function LoadingScreen() {
   const video = useRef(null);
