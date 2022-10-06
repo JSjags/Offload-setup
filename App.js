@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { StyleSheet } from "react-native";
-import { TailwindProvider } from "tailwind-rn";
-import utilities from "./tailwind.json";
+import { StyleSheet, View } from "react-native";
+import tw from "tailwind-react-native-classnames";
 import LoginScreen from "./screens/loginScreen";
 import LoadingScreen from "./screens/loadingScreen";
 
@@ -12,8 +11,8 @@ export default function App() {
     setTimeout(() => setShowLoadingScreen(false), 3000);
   }, []);
   return (
-    <TailwindProvider utilities={utilities}>
+    <View style={tw`flex-1`}>
       {showLoadingScreen ? <LoadingScreen /> : <LoginScreen />}
-    </TailwindProvider>
+    </View>
   );
 }
